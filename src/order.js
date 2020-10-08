@@ -18,16 +18,20 @@ function refundOrder(orderNumber, deliveryOrders) {
 function listItems(deliveryOrders) {
   var items =[];
   for (var i = 0; i < deliveryOrders.length; i++) {
-    orderItems.push(deliveryOrders[i].item);
+    items.push(deliveryOrders[i].item);
  }
- return orderitems.join(', ');
+ return items.join(', ');
 }
 
-function searchOrder(deliveryOrders, ) {
+function searchOrder(deliveryOrders, entree) {
   for (var i = 0; i < deliveryOrders.length; i++) {
-    if(deliveryOrders[i].item ===
+    if(deliveryOrders[i].item === entree) {
+      return true;
+    }
   }
+  return false;
 }
+
 module.exports = {
   takeOrder,
   refundOrder,
