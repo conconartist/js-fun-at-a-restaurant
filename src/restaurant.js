@@ -6,8 +6,13 @@ function createRestaurant(name) {
   return restaurant;
 }
 
+function addMenuItem(restaurant, menuItem) {
+  var lunchMenu = restaurant.menus.lunch;
+  lunchMenu.push(menuItem);
+}
+
 module.exports = {
   createRestaurant,
-  // addMenuItem,
+  addMenuItem,
   // removeMenuItem
 }
