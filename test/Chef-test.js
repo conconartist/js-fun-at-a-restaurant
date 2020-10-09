@@ -8,7 +8,7 @@ var {
 
 
 describe("Chef (class)", function() {
-  it.skip('should instantiate a chef object', function () {
+  it('should instantiate a chef object', function () {
     var hannah = new Chef("Hannah");
 
     assert.instanceOf(hannah, Chef);
@@ -60,10 +60,10 @@ describe("Chef (class)", function() {
     var restaurant = createRestaurant("Average Bakery");
     var chef = new Chef("Hannah", restaurant);
 
-    var foodItem = { 
+    var foodItem = {
       name: "Cinnamon Rolls",
       price: "4.49",
-      type: "breakfast" 
+      type: "breakfast"
     };
 
     addMenuItem(chef.restaurant, foodItem);

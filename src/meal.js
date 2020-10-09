@@ -7,7 +7,7 @@ function createMenuItem(name, price, type) {
   name: name,
   price: price,
   type: type,
-  }
+}
   return menuItem;
 };
 

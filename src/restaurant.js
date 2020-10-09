@@ -20,8 +20,18 @@ function addMenuItem(restaurant, menuItem) {
 }
 }
 
+function removeMenuItem(restaurant, menuItemName, type) {
+  var menuType = restaurant.menus[type]
+  for (var i = 0; i < menuType.length; i++) {
+    if(menuType[i].name === menuItemName) {
+      menuType.splice(i, 1);
+      return `No one is eating our ${menuItemName} - it has been removed from the ${type} menu!`;
+    }
+  }
+  return `Sorry, we don't sell ${menuItemName}, try adding a new recipe!`
+}
 module.exports = {
   createRestaurant,
   addMenuItem,
-  // removeMenuItem
+  removeMenuItem
 }
